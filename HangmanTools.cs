@@ -14,12 +14,12 @@ namespace HangmanStuff
 
             List<string> words = new List<string>()
             {
-                "King",
-                "Queen",
-                "Prince",
-                "Princess",
-                "Net",
-                "Demon"
+                "king",
+                "queen",
+                "prince",
+                "princess",
+                "net",
+                "demon"
             };
             // Get a random word.
             word = words[r.Next(words.Count)];
@@ -35,19 +35,19 @@ namespace HangmanStuff
 
             if (guess.Length != 1) //
             {
-                Console.WriteLine("Sorry, the guess can only be one letter.");
+                Console.WriteLine("Sorry, the guess can only be one letter. Please try again.");
                 result = false;
             }
 
             else if (!Char.IsLetter(guess[0]))
             {
-                Console.WriteLine("Sorry, the guess needs to be a letter.");
+                Console.WriteLine("Sorry, the guess needs to be a letter. Please try again.");
                 result = false;
             }
 
             else if (lettersGuessed.Contains(guess))
             {
-                Console.WriteLine("Sorry, you have already guessed the letter " + guess);
+                Console.WriteLine($"Sorry, you have already guessed the letter {guess}. Please try again.");
                 result = false;
             }
             return result;
