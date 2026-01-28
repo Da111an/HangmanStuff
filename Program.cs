@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            HangmanTools ht = new HangmanTools();
+            string word = ht.GetRandomWord();
+            Console.WriteLine("Random word: " + word);
+            
         }
+
+        
     }
 }
